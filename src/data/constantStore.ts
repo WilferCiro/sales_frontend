@@ -8,8 +8,6 @@ const keyList = {
   USER: "user",
 };
 
-const secretPass = "123";
-
 export const encrypt = (data: string) => {
   return data;
   // return CryptoJS.AES.encrypt(JSON.stringify(data), secretPass).toString();
@@ -42,7 +40,7 @@ const setItem = <T>(key: string, value: T | string) => {
 
 const removeItem = (key: string) => Cookie.remove(key);
 
-const PersistentStore = () => ({
+const ConstantStore = () => ({
   token: {
     get: () => getItem(keyList.TOKEN),
     set: (token: string) => setItem<string>(keyList.TOKEN, token),
@@ -59,4 +57,4 @@ const PersistentStore = () => ({
   },
 });
 
-export default PersistentStore();
+export default ConstantStore();

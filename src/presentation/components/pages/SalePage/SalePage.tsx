@@ -63,7 +63,6 @@ const SalePage = () => {
         if (index !== -1) {
           lastData[index]["quantity"] = value;
         }
-        console.log(lastData);
         return lastData;
       });
     }

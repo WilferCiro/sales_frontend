@@ -17,7 +17,7 @@ import {
   LoginServiceProps,
   loginService,
 } from "@/data/services/login.services";
-import persistentStorage from "@/data/persistentStorage";
+import constantStore from "@/data/constantStore";
 import { useRouter } from "next/navigation";
 import { getLoginFormDefinition } from "@/data/forms/login.form";
 import GenericForm from "../GenericForm";
@@ -35,7 +35,7 @@ const LoginForm = () => {
       if (result?.token) {
         nprogress.reset();
         nprogress.start();
-        persistentStorage.token.set(result.token);
+        constantStore.token.set(result.token);
         router.push("/org/home");
       }
     },

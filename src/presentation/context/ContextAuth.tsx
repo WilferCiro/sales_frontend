@@ -2,7 +2,7 @@
 	Created by Wilfer Daniel Ciro Maya
 */
 
-import persistentStorage from "@/data/persistentStorage";
+import constantStore from "@/data/constantStore";
 import { UserSchema } from "@/domain/schemas/UserSchema";
 import {
   useState,
@@ -32,7 +32,7 @@ interface IAuthProvider {
 
 const ContextProviderAuth = ({ children }: IAuthProvider) => {
   const [currentUser, setCurrentUser] = useState<UserSchema | undefined>(
-    persistentStorage.user.get() || undefined
+    constantStore.user.get() || undefined
   );
   const [isLoading, setIsLoading] = useState(true);
 
@@ -43,14 +43,14 @@ const ContextProviderAuth = ({ children }: IAuthProvider) => {
 
   const login = (token: string, userData: UserSchema) => {
     setCurrentUser(userData);
-    persistentStorage.user.set(userData);
-    persistentStorage.token.set(token)
+    constantStore.user.set(userData);
+    constantStore.token.set(token)
   };
 
   const logout = () => {
     setCurrentUser(undefined);
-    persistentStorage.user.remove();
-    persistentStorage.token.remove();
+    constantStore.user.remove();
+    constantStore.token.remove();
   };
 
   return (

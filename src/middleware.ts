@@ -1,6 +1,6 @@
 import { checkIsAuth } from "@/domain/utils/auth.utils";
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
-import { decrypt } from "./data/persistentStorage";
+import { decrypt } from "./data/constantStore";
 
 export async function middleware(request: NextRequest, ev: NextFetchEvent) {
   const url = request.nextUrl.pathname;

@@ -1,5 +1,5 @@
 import { notifications } from "@mantine/notifications";
-import persistentStorage from "../persistentStorage";
+import constantStore from "../constantStore";
 
 interface FetchClientProps<T> {
   endpoint: string;
@@ -22,7 +22,7 @@ export const fetchClient = async <T, U>({
     "Content-Type": "application/json",
   };
   if (!noToken) {
-    const token = persistentStorage.token.get();
+    const token = constantStore.token.get();
     headers["authorization"] = "Bearer " + token;
   }
   try {

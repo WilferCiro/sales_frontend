@@ -109,7 +109,6 @@ const TableCrud = <T extends object>({
 
   // TABLE
   const refreshTable = async () => {
-    console.log(`${endpoint}_paginated`);
     await queryClient.refetchQueries([`${endpoint}_paginated`], {
       active: true,
     });
@@ -146,7 +145,6 @@ const TableCrud = <T extends object>({
       formEdit.getValues(),
       focusRegister.current
     );
-    console.log(valid);
     if (valid) {
       refreshTable();
     }
@@ -184,7 +182,6 @@ const TableCrud = <T extends object>({
     return newCols;
   }, [columns, actions, openDisable, openDelete, openEdit]);
 
-  console.log(formEdit.formState.errors);
 
   return (
     <>

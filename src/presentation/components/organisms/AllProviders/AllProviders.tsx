@@ -10,7 +10,7 @@ import { useServerInsertedHTML } from "next/navigation";
 import { useState } from "react";
 import { useHotkeys } from "@mantine/hooks";
 import { Notifications } from "@mantine/notifications";
-import persistentStorage from "@/data/persistentStorage";
+import constantStore from "@/data/constantStore";
 import { QueryClient, QueryClientProvider } from "react-query";
 import RouterTransition from "../../atoms/RouterTransition";
 
@@ -25,7 +25,7 @@ export default function AllProviders({
   const queryClient = new QueryClient();
   const toggleColorScheme = (value?: ColorScheme) => {
     const val = value || (colorScheme === "dark" ? "light" : "dark");
-    persistentStorage.theme.set(val);
+    constantStore.theme.set(val);
     setColorScheme(val);
   };
 

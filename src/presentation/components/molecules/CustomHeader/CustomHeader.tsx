@@ -1,4 +1,4 @@
-import persistentStorage from "@/data/persistentStorage";
+import constantStore from "@/data/constantStore";
 import {
   ActionIcon,
   Avatar,
@@ -34,8 +34,8 @@ const CustomHeader = ({ setOpened, opened }: Props) => {
   const closeSession = () => {
     nprogress.reset();
     nprogress.start();
-    persistentStorage.token.remove();
-    persistentStorage.user.remove();
+    constantStore.token.remove();
+    constantStore.user.remove();
     router.replace("/user/login");
   };
 

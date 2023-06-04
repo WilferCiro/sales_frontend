@@ -23,7 +23,6 @@ const SelectSearchForm = React.forwardRef(
         refetchOnWindowFocus: false,
       }
     );
-    console.log(value);
     return (
       <Box pos="relative">
         <LoadingOverlay visible={isLoading} overlayBlur={2} />

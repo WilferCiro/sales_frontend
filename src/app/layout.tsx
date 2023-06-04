@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
-import { decrypt } from "@/data/persistentStorage";
+import { decrypt } from "@/data/constantStore";
 import AllProviders from "@/presentation/components/organisms/AllProviders/AllProviders";
 import { ColorScheme } from "@mantine/core";
 
