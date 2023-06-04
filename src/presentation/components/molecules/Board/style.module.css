@@ -1,0 +1,11 @@
+.board_container {
+  display: grid;
+  margin: auto;
+  width: fit-content;
+  gap: 5px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+

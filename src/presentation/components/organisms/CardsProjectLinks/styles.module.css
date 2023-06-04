@@ -1,0 +1,21 @@
+.source_code {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .source_code {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .source_code {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+}

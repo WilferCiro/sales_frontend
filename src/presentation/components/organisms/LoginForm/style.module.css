@@ -1,0 +1,19 @@
+.form {
+  width: 100%;
+  border-radius: var(--border-radius);
+  height: calc(100vh - 20px);
+  padding: 80px 50px;
+  display: flex;
+  align-items: center;
+}
+.form > div {
+  width: 100%;
+}
+.form h2 {
+  text-align: center;
+}
+
+.avatar {
+  background: var(--primary-color);
+  vertical-align: middle;
+}

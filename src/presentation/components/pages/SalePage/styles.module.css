@@ -1,0 +1,22 @@
+.card_total {
+  text-align: right;
+  margin-bottom: 10px;
+  width: 40%;
+  margin-left: 60%;
+}
+
+.select_sell {
+  width: 40%;
+  margin: 40px 0px;
+}
+
+
+@media (max-width: 767px) {
+  .card_total {
+    width: 100%;
+    margin-left: auto;
+  }
+  .select_sell {
+    width: 100%;
+  }
+}
