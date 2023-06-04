@@ -70,7 +70,6 @@ export const getUserFormDefinition = (): FormFieldSchema[] => {
   return fields;
 };
 
-
 export const getUserFormDefinitionEdit = (): FormFieldSchema[] => {
   const fields: FormFieldSchema[] = [
     {
@@ -87,13 +86,13 @@ export const getUserFormDefinitionEdit = (): FormFieldSchema[] => {
       placeholder: "Apellidos",
       required: true,
     },
-    {
+    /*{
       type: "email",
       name: "email",
       label: "E-mail",
       placeholder: "E-mail",
       required: true,
-    },
+    },*/
     {
       type: "text",
       name: "phone",
