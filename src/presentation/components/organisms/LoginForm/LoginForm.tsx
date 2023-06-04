@@ -62,11 +62,7 @@ const LoginForm = () => {
         <Button fullWidth onClick={onFinish} loading={mutation.isLoading}>
           Iniciar sesión
         </Button>
-        <Divider my="xs" label="ó" labelPosition="center" />
-        <Link href="/user/register">Regístrate</Link>
-        <Divider my="lg" />
-        <Link href="/auth/recover">¿Olvidaste tu contraseña?</Link>
-        <Space mt={60} />
+        <Divider my="xs" label="Ayuda" labelPosition="center" />
         <List spacing="xs" size="sm" center>
           <List.Item
             icon={
